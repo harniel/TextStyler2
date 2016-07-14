@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/frame"
+    android:orientation="vertical"
+    tools:context="com.example.cicct.textstyler.MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtInput"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bold"
+        android:id="@+id/chkBold"
+        android:layout_below="@+id/txtInput"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Italic"
+        android:id="@+id/chkItalic"
+        android:checked="false"
+        android:layout_below="@+id/txtInput"
+        android:layout_toEndOf="@+id/chkBold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chkBold"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/txtVResult"
+        android:orientation="vertical"
+        android:id="@+id/rgColors"
+        android:layout_alignEnd="@+id/txtInput">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:id="@+id/rBtnGreen"
+            android:checked="false"
+            android:layout_below="@+id/rBtnBlue"
+            android:layout_alignStart="@+id/rBtnBlue" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:id="@+id/rBtnBlue"
+            android:layout_below="@+id/rBtnRed"
+            android:checked="false"
+            android:layout_toStartOf="@+id/chkItalic" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:id="@+id/rBtnRed"
+            android:layout_below="@+id/chkBold"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:layout_toStartOf="@+id/chkItalic" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtVResult"
+        android:textSize="25sp"
+        android:text=""
+        android:layout_marginBottom="104dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</LinearLayout>
