@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText mInput;
     private CheckBox mBold;
     private CheckBox mItalic;
-    private RadioGroup mColor;
     private TextView mTvResult;
     private LinearLayout mFrame;
     private RadioButton mGreen;
@@ -39,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         mInput = (EditText) findViewById(txtInput);
         mBold = (CheckBox) findViewById(R.id.chkBold);
         mItalic = (CheckBox) findViewById(R.id.chkItalic);
-        mColor = (RadioGroup) findViewById(R.id.rgColors);
         mFrame = (LinearLayout) findViewById(R.id.frame);
         mBlue = (RadioButton) findViewById(R.id.rBtnBlue);
         mGreen = (RadioButton) findViewById(R.id.rBtnGreen);
